@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'IRANSans';
+    src: local('IRANSans'),url(./IRANSans.ttf) format('truetype');
+}
+*{
+    font-family:IRANSans;
+}
+.container{
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: auto;
+    text-align: center;
+    height: 100%;
+}
+.inner_div{
+    width: 80%;
+    /* border: 1px solid black; */
+    margin: auto;
+    text-align: center;
+    direction: rtl;
+}
+form input[type='text'],form input[type='number']{
+    direction: rtl;
+    border:1px solid rgba(0,0,0,0.3)
+}
+form input[type='text'],form input[type='number']:focus{
+    outline: none;
+}
+form button{
+    background-color: rgba(0, 0, 0,0.3);
+    border: none;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+form button:hover{
+    background-color: rgba(0, 0, 0,0.8);
+    color:#fff;
+    border: none;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+select{
+    /* -moz-appearance: none;
+    -webkit-appearance: none; */
+    /* appearance: none; */
+    border:none;
+    outline: none;
+  
+}
