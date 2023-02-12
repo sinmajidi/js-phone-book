@@ -54,3 +54,11 @@ select{
     outline: none;
   
 }
+.table{
+    width: 60%;
+    margin:auto;
+    text-align: center;
+}
+.table th{
+    background-color: rgba(0, 0, 0,0.3);
+}
