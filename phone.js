@@ -26,9 +26,9 @@ const table=document.createElement('table');
 
 
 
-
 //event listeners
 button.addEventListener('click',additem);
+table.addEventListener('click',deleteitem);
 
 
 //functions
@@ -38,15 +38,37 @@ function additem(event){
     const td1=document.createElement('td');
     const td2=document.createElement('td');
     const td3=document.createElement('td');
+    const td4=document.createElement('td');
+    const trash_button=document.createElement('button');
     td1.innerText=name.value;
     td2.innerText=number.value;
     td3.innerText=selectbox.options[selectbox.selectedIndex].value;
+    trash_button.innerHTML="<i class='fa fa-trash-o fa-2x'></i>";
+    trash_button.classList.add('trash_button');
+    td4.appendChild(trash_button)
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
+    tr.appendChild(td4);
     table.appendChild(tr);
+    name.value='';
+    number.value='';
     
 }
+
+function deleteitem(event){
+    event.preventDefault();
+    if(event.target.parentElement.classList[0]=='trash_button'){
+        ((event.target.parentElement).parentElement).parentElement.classList.add('deleted_trashbutton');
+        {setTimeout(() => {
+            ((event.target.parentElement).parentElement).parentElement.remove();
+        }, 2000);}
+    }
+    
+    
+    
+}
+
 
 
 

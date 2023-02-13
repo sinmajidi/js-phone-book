@@ -62,3 +62,18 @@ select{
 .table th{
     background-color: rgba(0, 0, 0,0.3);
 }
+.trash_button{
+    border: none;
+    background-color: transparent;
+    transition: all 0.5s linear;
+}
+.trash_button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    
+}
+.deleted_trashbutton{
+    opacity: 0;
+    transition: all 2s linear;
+    transform: translateY(300%);
+}
